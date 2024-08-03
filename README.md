@@ -20,6 +20,14 @@
 - * ```tracked``` - файл отслеживается (не выводится в ```git status```)
 - * файл может быть одновременно ```staged``` и ```modified```, но это будут разные его версии
 
+```mermaid
+graph LR;
+    untracked -- "git add" --> staged;
+    staged -- "git commit" --> tracked;
+    tracked -- "изменения" --> modified;
+    modified -- "git commit" --> tracked;
+```
+
 [Официальная страница загрузки](https://git-scm.com/download/)
 
 ---
